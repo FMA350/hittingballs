@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+	padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+
+html {
+  box-sizing: border-box;
+  font-size: 70.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 80%; 
+    } }
+
+
+body {
+	background-color: lavender;
+	color: #f9f9f9;
+	text-align: justified;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+    }
+
+
+table { 
+    width:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table td {
+    width: 33%;
+    vertical-align: middle;
+}
+
+input[type="text"], input[type="email"], input[type="date"], textarea {
+    background-color : #787878; 
+}
+
+
+#mainContent {
+	border-radius: 10px;
+	border: 1px solid #016698;
+	box-shadow: 10px 10px 80px 10px #016698;
+	background-color: #404040;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	padding: 3%;
+	margin-top: 3%;
+    font-size: 1.2em;
+}
+
+#mainContent form input {
+	margin-top: 10%;
+	width: 70%;
+}
+
+
+
+#submit {
+	margin-top: 10%;
+	border-radius: 5px;
+	border: 1px solid transparent;
+    border-top: 1px outset #016698;
+	background-color: transparent;
+	padding: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	width: 100%;
+	box-shadow: 3px 3px 8px transparent;
+	transition: 0.5s;
+	text-align: center;
+	align-content: center;
+    color: #ccebff;
+
+}
+
+
+#submit:hover {
+	border: 1px outset #33adff;
+	background-color: #ccebff;
+	box-shadow: 3px 3px 80px #33adff;
+	cursor: pointer;
+	width: 100%;
+	transition: 0.4s;
+    color: #404040;
+
+}
+#submit:active {
+    box-shadow:  0 1px 0 #6495ed;
+    border: 2px inset #33adff; 
+    top: 3px;
+}
+
+
+/* Add some margins for each label */
+#formInline label {
+  margin: 5px 10px 5px 0;
+}
+
+#formInline input {
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    padding: 3%;
+    background-color: #e6e6e6;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+#formButtons {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#formButtons input[type="radio"] {
+    margin-right: 7%!important;
+    width: 5% !important;
+	height: 20px;
+    margin-top: 0; 
+}
+
+.label {
+    font-size: 1.2em;
+    padding-top: 5%;
+}
+
+
+
+/*   TextArea stles   */
+#output {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.5s;
+    color: #333;
+    background-color: #e6e6e6;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    resize: none;
+    margin-top: 10%;
+}
+
+#output:hover {
+    background-color: #cccccc;
+    border: 2px outset #999999;
+    cursor: default;
+    transition: 0.5s;
+}
+
+
+#emailImg {
+    width: 10%;
+    vertical-align: middle;
+    transition: 0.5s
+}
+
+
+.empty {
+    background-color:#e6e6e6 !important;   
+    transition: 0.5s
+
+}
+
+.error {
+    background-color:#ff6666 !important;
+    transition: 0.5s
+
+}
+
+.valid {
+    background-color:#85e085 !important;   
+    transition: 0.5s
+
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+    
+    formInline input {
+        margin: 10px 0;
+    }
+
+    #mainContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        padding: 3%;
+        margin-top: 3%;
+    }    
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    body {
+        background-color: #333333;
+    }
+    
+    formInline input {
+        margin: 10px 0;
+    }
+
+    #mainContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        padding: 3%;
+        margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /*  Phones only  */
+    body {
+        background-color: #333333;
+    }
+    
+    formInline input {
+        margin: 10px 0;
+    }
+
+    #mainContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding: 3%;
+        margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    
+    /* Phones in portait mode */
+
+     body {
+        background-color: #333333;
+    }
+    
+    formInline input {
+        margin: 10px 0;
+    }
+
+    #mainContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding: 3%;
+        margin-top: 3%;
+    }
+}
+
+
+
+
