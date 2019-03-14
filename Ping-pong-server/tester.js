@@ -1,7 +1,11 @@
 const https = require('http')
 
 const data = JSON.stringify({
-  todo: 'Buy the milk'
+    request: 'new_user',
+    cars: [
+        { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] },
+    { "name":"BMW", "models":[ "320", "X3", "X5" ] },
+    ]
 })
 
 const options = {

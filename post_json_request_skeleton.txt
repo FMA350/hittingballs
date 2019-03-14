@@ -1,0 +1,67 @@
+###POST REQUEST###
+
+############ CREATE a new user on the server ############
+req.data= {
+    request: 'create_new_user',
+    username: <string>,
+    password: <hashed string>,
+    organization: <string>
+}
+//if positive
+res.data{
+    response: 'new_user_created'
+}
+//if negative
+res.data{
+    response: 'create_new_user_failure'
+}
+
+############ DELETE my user ############
+req.data= {
+    request: 'delete_user',
+    username: <string>,
+    password: <hashed string>
+}
+
+//if positive
+res.data{
+    response: 'user_deleted'
+}
+//if negative
+res.data{
+    response: 'delete_user_failure'
+}
+
+############ LOAD user data ############
+req.data = {
+    request: 'load_data',
+    username: <string>,
+    password: <hashed string>
+}
+//if positive
+res.data{
+    response: 'data_loaded'
+    rank: <number>
+    skill: <number in range from 0:1>
+    upcoming_games: []<JSON_event>
+    past_games: []<JSON_event>
+
+}
+//if negative
+res.data{
+    response:'load_data_failure'
+}
+
+
+############ CREATE new game ############
+req.data = {
+    request: 'create_new_game',
+    username: <string>
+    password: <hashed string>
+    adversary: <string>
+}
+//if positive
+{
+    response: 'new_event'
+    event: <JSON_event>
+}
