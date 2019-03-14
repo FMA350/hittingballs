@@ -7,6 +7,24 @@
     font-family: 'Raleway', sans-serif;
 }
 
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
 *,
 *::before,
 *::after {
@@ -28,7 +46,6 @@ body {
 	background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1))  no-repeat center center fixed;
 	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1))  no-repeat center center fixed;
 	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1))  no-repeat center center fixed;
-    
 	color: #f9f9f9;
 	text-align: justified;
 }
@@ -36,7 +53,7 @@ body {
 h3 {
     text-align: center;
     font-size: 2em;
-    }
+}
 
 
 table { 
@@ -60,11 +77,18 @@ table td {
     margin-left:auto;
     margin-right: auto;
     border-radius: 10px;
-    background-color: #03A9F4;
+    background-color: #6699ff;
     color: #FFEB3B;
     text-align: center;
     margin-top: 10%;
     padding: 2%;
+    box-sizing: border-box;
+
+    overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+    
 }
 
 #options {
@@ -105,7 +129,7 @@ table td {
     margin-left:auto;
     margin-right: auto;
     border-radius: 10px;
-    background-color: #03A9F4;
+    background-color: #6699ff;
     color: #FFEB3B;
     text-align: center;
     margin-top: 10%;
@@ -135,6 +159,28 @@ table td {
     box-shadow: 3px 4px 40px 0 #3F51B5;
     transition: 0.42s;
     font-weight: 500;
+}
+
+
+#signIn input{
+    color: #333;
+}
+
+
+
+
+
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
 }
 
 
