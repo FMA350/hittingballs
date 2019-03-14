@@ -15,7 +15,11 @@ const server = http.createServer((req, res) => {
                 req.connection.destroy();
             }
             req.on('end', function (){
-            console.log(body);
+            var data = JSON.parse(body);
+            console.log(data);
+            if(data.request == 'create_new_user'){
+                console.log('create new user request!');
+            }
             res.end("I bought it")
             });
         });
