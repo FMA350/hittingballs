@@ -47,94 +47,145 @@
 
 <body>
 
+    <!--  Get all the DIV's in one to preserve speed and efficiency  -->
     <div id="fullContent">
-    
+        
+        
+        <!--   Show the screen for the user to selectthe option they would like     -->
+        <div id="selectMethod">
+        
+            <!-- Welcomings  -->
+            <h2>Welcome, user</h2>
+            
+            <h4>To hitting balls</h4>
+            
+            <!-- Giving user the options to choose from -->
+            <div id="options">
+                <button id="optionSignIn" value="signIn" type="button">Sign in</button>
+                
+                <button id="optionRegister" value="register" type="button">Register</button>
+            </div>
+            
+        </div>
+        
+        
+        
+        <div id="signIn" hidden>
+            <h2>Sign in</h2>
+
+            <form>
+
+                <br>
+                <br>
+
+                <label for="usernameSignIn"> Username </label>
+                <input type="text" id="usernameSignIn" name="usernameSignIn">
+
+                <br>
+                <br>
+
+                <label for="passwordSignIn"> Password </label>
+                <input type="password" id="passwordSignIn" name="passwordSignIn">
+   <br>
+                <br>
+
+                <button type="submit" id="submitSignIn" value="submit" name="Submit">Submit</button>
+
+            </form>
+            
+        
+        </div>
+        
+        
+        
+        
+        
+        <!--- The whole web content belongs to this DIV -->
+        <div id="register" hidden>
+
+            <!--  Content heading      -->
+            <h3> Register </h3>
+
+            <!--- A form that allows for details to be processed 				-->
+            <!--- When user enters the details and clicks submit, a script (run below) 	-->
+            <!--- allows to add (cache) all the details submitted within the form 		-->
+            <!--- to be reused and shown within the textarea and the user input fields  	-->
+
+            <form id="formInline" >
+
+                <table>
+                    <tr>
+                        <td class="label"><label for="fname"> First name: </label></td>
+                        <td><input id="fname" type="text" name="fname" placeholder="e.g. John"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="label"><label for="lname"> Last name: </label></td>
+                        <td><input id="lname" type="text" name="lname" placeholder="e.g. Johnny" ></td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="label"><label for="email"> Email: </label></td>
+                        <td><input id="email" type="text" placeholder="e.g. user@example.com" name="email" > <img src="images/logo.png" id="emailImg"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="label"><label for="dob"> D.O.B </label></td>
+                        <td><input id="dob" type="date" max="2010-01-31" name="dob"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="label"><label for="pass1"> Password: </label></td>
+                        <td><input id="pass1" type="password" name="pass1" > </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="label"><label for="pass2"> Confirm password: </label></td>
+                        <td><input id="pass2" type="password" name="pass2" ></td>
+                    </tr>   
+
+                </table>
+
+
+                <div id="formButtons">
+                    <label for="gen" id="labelGen"> Please select gender</label>
+                    <br>
+                    <br>
+                    <label for="gender" value= "Male">Male</label>
+                    <input type="radio" class="radio" name="gender" value="male"> 
+
+                    <label for="gender" value= "Female">Female</label>
+                    <input type="radio" class="radio" name="gender" value="female"> 
+
+                    <label for="gender" value= "Other">Other</label>
+                    <input type="radio" class="radio" name="gender" value="other">  <br>
+                </div>
+
+                <textarea id="output" readonly rows=8></textarea>
+
+
+                <button id="submit" type="submit" >Submit</button>
+
+            </form>
+
+        </div>
+        
+        
+        
+        
+        
+        
     </div>
     
     
     
     
-    
-	<!--- The whole web content belongs to this DIV -->
-	<div id="mainContent" hidden>
 
-        <!--  Content heading      -->
-		<h3> Register </h3>
-
-		<!--- A form that allows for details to be processed 				-->
- 		<!--- When user enters the details and clicks submit, a script (run below) 	-->
-		<!--- allows to add (cache) all the details submitted within the form 		-->
-		<!--- to be reused and shown within the textarea and the user input fields  	-->
-
-		<form id="formInline" onsubmit="resultsFun(); return false">
-            
-            <table>
-                <tr>
-                    <td class="label"><label for="fname"> First name: </label></td>
-                    <td><input id="fname" type="text" name="fname" placeholder="e.g. John"> </td>
-                </tr>
-
-                
-                <tr>
-                    <td class="label"><label for="lname"> Last name: </label></td>
-                    <td><input id="lname" type="text" name="lname" placeholder="e.g. Johnny" ></td>
-                </tr>
-                
-                
-                <tr>
-                    <td class="label"><label for="email"> Email: </label></td>
-                    <td><input id="email" type="text" placeholder="e.g. user@example.com" name="email" > <img src="images/logo.png" id="emailImg"></td>
-                </tr>
-
-                
-                <tr>
-            		<td class="label"><label for="dob"> D.O.B </label></td>
-                    <td><input id="dob" type="date" max="2010-01-31" name="dob"> </td>
-                </tr>
-                
-                
-                <tr>
-			        <td class="label"><label for="pass1"> Password: </label></td>
-                    <td><input id="pass1" type="password" name="pass1" > </td>
-                </tr>
-                
-                
-                <tr>
-                    <td class="label"><label for="pass2"> Confirm password: </label></td>
-                    <td><input id="pass2" type="password" name="pass2" ></td>
-                </tr>   
-
-            </table>
-
-
-            <div id="formButtons">
-                <label for="gen" id="labelGen"> Please select gender</label>
-                <br>
-                <br>
-                <label for="gender" value= "Male">Male</label>
-                <input type="radio" class="radio" name="gender" value="male"> 
-                
-                <label for="gender" value= "Female">Female</label>
-                <input type="radio" class="radio" name="gender" value="female"> 
-                
-                <label for="gender" value= "Other">Other</label>
-                <input type="radio" class="radio" name="gender" value="other">  <br>
-            </div>
-
-            <textarea id="output" readonly rows=8></textarea>
-
-
-            <button id="submit" type="submit" >Submit</button>
-
-		</form>
-
-<!--- Creating and allocating memory  the objects to validated within the browsers memory -->
-<!--- Script below is a jQuery scirpt used for caching specific details within the web browser (creating cookies)  -->
-
-<script>
-
-</script>
-	</div>
 
 </body>
 </html>

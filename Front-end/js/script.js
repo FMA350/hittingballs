@@ -1,8 +1,11 @@
 $(document).ready(function() {
     
     
-    $('#mainContent').hide();
-
+    $("#optionSignIn").click(function(){
+        $("#selectMethod").fadeOut(1500);
+        $("#signIn").fadeIn(1500);
+    });
+    
     $("#email").change(validate).keyup(validate);
 
     function validate() {

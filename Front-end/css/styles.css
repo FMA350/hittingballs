@@ -1,3 +1,6 @@
+
+
+/*  Main config for global params */
 * {
     margin: 0;
 	padding: 0;
@@ -9,7 +12,6 @@
 *::after {
   box-sizing: inherit; }
 
-
 html {
   box-sizing: border-box;
   font-size: 70.5%; }
@@ -20,7 +22,13 @@ html {
 
 
 body {
-	background-color: lavender;
+/*    background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%)  no-repeat center center fixed;*/
+    
+    background: rgb(26, 188, 156 ) no-repeat center center fixed ;
+	background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1))  no-repeat center center fixed;
+	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1))  no-repeat center center fixed;
+	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1))  no-repeat center center fixed;
+    
 	color: #f9f9f9;
 	text-align: justified;
 }
@@ -42,12 +50,100 @@ table td {
     vertical-align: middle;
 }
 
-input[type="text"], input[type="email"], input[type="date"], textarea {
-    background-color : #787878; 
+
+
+/*   Initial sign in or register box  */
+#selectMethod {
+    width: 30%;
+    border: 1px outset #0086b3;
+    box-shadow: 5px 10px 80px 10px #00394d;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: #03A9F4;
+    color: #FFEB3B;
+    text-align: center;
+    margin-top: 10%;
+    padding: 2%;
+}
+
+#options {
+    display: flex;
+}
+
+#options button {
+    border: 1px outset #9C27B0;
+    background-color: #e6d2f9;
+    color: #0086b3;
+    padding: 2% 5% 2% 5%;
+    margin: 0 ;
+    border-radius: 10px; 
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex: 1;
+    box-shadow: 5px 10px 80px 10px transparent;
+    transition: 0.5s;
+}
+
+#options button:hover {
+    border: 1px inset #607D8B;
+    background-color: #ff99cc;
+    color: #e6d2f9;
+    box-shadow: 3px 4px 40px 0 #3F51B5;
+    transition: 0.42s;
+    font-weight: 500;
 }
 
 
-#mainContent {
+/* Sign In page open up here */
+
+#signIn  {
+    width: 30%;
+    border: 1px outset #0086b3;
+    box-shadow: 5px 10px 80px 10px #00394d;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: #03A9F4;
+    color: #FFEB3B;
+    text-align: center;
+    margin-top: 10%;
+    padding: 2%;
+}
+
+
+#signIn  button {
+    border: 1px outset #9C27B0;
+    background-color: #e6d2f9;
+    color: #0086b3;
+    padding: 2% 5% 2% 5%;
+    margin: 0 ;
+    border-radius: 10px; 
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex: 1;
+    box-shadow: 5px 10px 80px 10px transparent;
+    transition: 0.5s;
+}
+
+#signIn button:hover {
+    border: 1px inset #607D8B;
+    background-color: #ff99cc;
+    color: #e6d2f9;
+    box-shadow: 3px 4px 40px 0 #3F51B5;
+    transition: 0.42s;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+#register {
 	border-radius: 10px;
 	border: 1px solid #016698;
 	box-shadow: 10px 10px 80px 10px #016698;
@@ -60,7 +156,7 @@ input[type="text"], input[type="email"], input[type="date"], textarea {
     font-size: 1.2em;
 }
 
-#mainContent form input {
+#register form input {
 	margin-top: 10%;
 	width: 70%;
 }
@@ -187,6 +283,10 @@ input[type="text"], input[type="email"], input[type="date"], textarea {
 }
 
 
+
+
+
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media (max-width: 700px) {
     .row, .navbar {   
@@ -197,7 +297,7 @@ input[type="text"], input[type="email"], input[type="date"], textarea {
         margin: 10px 0;
     }
 
-    #mainContent {
+    #register {
         margin-left: auto;
         margin-right: auto;
         width: 35%;
@@ -217,7 +317,7 @@ input[type="text"], input[type="email"], input[type="date"], textarea {
         margin: 10px 0;
     }
 
-    #mainContent {
+    #register {
         margin-left: auto;
         margin-right: auto;
         width: 35%;
@@ -236,7 +336,7 @@ input[type="text"], input[type="email"], input[type="date"], textarea {
         margin: 10px 0;
     }
 
-    #mainContent {
+    #register {
         margin-left: auto;
         margin-right: auto;
         width: 80%;
@@ -257,7 +357,7 @@ input[type="text"], input[type="email"], input[type="date"], textarea {
         margin: 10px 0;
     }
 
-    #mainContent {
+    #register {
         margin-left: auto;
         margin-right: auto;
         width: 80%;
